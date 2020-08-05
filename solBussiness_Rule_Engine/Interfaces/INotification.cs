@@ -6,5 +6,6 @@ namespace Interfaces
 {
     public interface INotification
     {
+        bool SendNotification();
     }
 }

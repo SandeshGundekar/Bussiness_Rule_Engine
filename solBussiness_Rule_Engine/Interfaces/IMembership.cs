@@ -6,5 +6,7 @@ namespace Interfaces
 {
     public interface IMembership
     {
+        bool ActivateMembership();
+        bool UpgradeMembership();
     }
 }
