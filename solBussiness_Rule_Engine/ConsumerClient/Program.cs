@@ -1,6 +1,7 @@
 ﻿using Implementations.Commission;
 using Implementations.Membership;
 using Interfaces;
+using Microsoft.Extensions.DependencyInjection;
 using Models;
 using Services;
 using System;
@@ -11,8 +12,13 @@ namespace ConsumerClient
     {
         static void Main(string[] args)
         {
-            ICommission commission = new AgentCommission();
-            IMembership membership = new CustomerMembership();
+            var serviceProvider = new ServiceCollection()
+            .AddSingleton<ICommission, AgentCommission>()
+            .AddSingleton<IMembership, CustomerMembership>()
+            .BuildServiceProvider();
+
+            ICommission commission = serviceProvider.GetService<ICommission>();
+            IMembership membership = serviceProvider.GetService<IMembership>();
 
             PaymentService paymentService = new PaymentService(commission, membership);
             PaymentResult result;
