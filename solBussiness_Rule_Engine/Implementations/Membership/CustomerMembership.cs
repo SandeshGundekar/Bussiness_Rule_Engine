@@ -9,12 +9,14 @@ namespace Implementations.Membership
     {
         public bool ActivateMembership()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Activate Membership");
+            return true;
         }
 
         public bool UpgradeMembership()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Upgrade Membership");
+            return true;
         }
     }
 }

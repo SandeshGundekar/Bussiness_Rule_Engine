@@ -10,7 +10,16 @@ namespace Implementations.PackingSlip
     {
         public bool GeneratePackingSlip(Product pProduct)
         {
-            throw new NotImplementedException();
+            if (pProduct.ProductName == "Learning To Ski")
+            {
+                Console.WriteLine("Added 'First Aid' Video in packing list");
+                return true;
+            }
+            else
+            {
+                return false;
+
+            }
         }
     }
 }

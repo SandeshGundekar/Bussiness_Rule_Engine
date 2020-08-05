@@ -9,7 +9,8 @@ namespace Implementations.Notification
     {
         public bool SendNotification()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Send Email");
+            return true;
         }
     }
 }

@@ -8,9 +8,12 @@ namespace Implementations.PackingSlip
 {
     public class RoyaltyPackingSlip : IPackingSlip
     {
+        IPackingSlip packingSlip = new ProductPackingSlip();
         public bool GeneratePackingSlip(Product pProduct)
         {
-            throw new NotImplementedException();
+            packingSlip.GeneratePackingSlip(pProduct);
+            Console.WriteLine("Generate Duplicate Packing Slip for Royalty");
+            return true;
         }
     }
 }

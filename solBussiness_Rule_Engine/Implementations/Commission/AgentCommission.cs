@@ -10,7 +10,8 @@ namespace Implementations.Commission
     {
         public bool GenerateCommission(Product pProduct)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Generate Commision to Agent");
+            return true;
         }
     }
 }

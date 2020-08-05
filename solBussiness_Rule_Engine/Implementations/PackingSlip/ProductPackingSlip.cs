@@ -10,7 +10,8 @@ namespace Implementations.PackingSlip
     {
         public bool GeneratePackingSlip(Product pProduct)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Generate Product Packing Slip");
+            return true;
         }
     }
 }
